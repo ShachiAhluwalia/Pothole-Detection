@@ -18,8 +18,8 @@ To set up the project, follow these steps:
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/pothole-detection-yolo.git  
-cd pothole-detection-yolo  
+git clone https://github.com/your-ShachiAhluwalia/Pothole-Detection.git  
+cd Pothole-Detection  
 
 # Create a virtual environment (optional)
 python -m venv venv  
@@ -43,7 +43,7 @@ api = KaggleApi()
 api.authenticate()
 
 # Define dataset path
-dataset = "your-kaggle-dataset-name"
+dataset = "https://www.kaggle.com/datasets/andrewmvd/pothole-detection"
 download_path = "data/"
 
 # Download dataset
@@ -54,19 +54,6 @@ print("Dataset downloaded and extracted successfully!")
 
 Make sure you have your Kaggle API key set up in `~/.kaggle/kaggle.json`.
 
-## Training the Model  
-1. Prepare the dataset in the required YOLO format.  
-2. Use the following command to train the model:  
-
-```bash
-python train.py --data data.yaml --epochs 50 --batch-size 16 --img-size 640 --weights yolov5s.pt
-```
-
-3. Evaluate model performance using:  
-
-```bash
-python detect.py --weights best.pt --source test_images/
-```
 
 ## Results  
 - Achieved **[XX]% accuracy** on test data  
